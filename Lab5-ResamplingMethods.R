@@ -368,7 +368,7 @@ str(defaulter_dataset)
 train_index <- createDataPartition(defaulter_dataset$`default payment next month`, # nolint
                                    p = 0.80, list = FALSE)
 defaulter_dataset_train <- defaulter_dataset[train_index, ]
-defaulter_dataset_test <- defaulter_dataset[-train_index, ]
+defaulter_dataset_test <- defaulter_dataset[-train_index, ] #everything that isn't in this index is in the testing dataset
 
 ## 2. Train a Naive Bayes classifier using the training dataset ----
 
